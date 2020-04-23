@@ -1,0 +1,39 @@
+<section class="prez1">
+    <div class="container">
+      <div class="row">
+          <div class="separator"></div>
+        <h2 id="t2">Mes Tutos</h2>
+        <div class="col-sm-3" *ngFor="let vid of this.basetutoService.ListAddTutoUser">
+            <a class="thumbnail" >
+              <video autobuffer controls onmouseout="this.pause()" onmouseover="this.play()" preload="metadata"[src]="vid.id" title="{{vid.subject}}" frameborder="0" height="150px" width="240px"></video>
+            </a>
+            <h4 class="descriptionvid">{{vid.subject}}</h4>
+            <div class="notediv"><img class="notei"src="../../assets/images/etoiles1.png"></div>
+            <div class="heart" *ngIf="this.basetutoService.inList(this.basetutoService.ListFavoritesTutosUser,vid)==true"><span style="color: red"class="glyphicon glyphicon-heart" (click)="this.addToFavorites(vid) "></span></div>
+              <div class="heart" *ngIf="this.basetutoService.inList(this.basetutoService.ListFavoritesTutosUser,vid)==false"><span style="color:rgb(102, 96, 96)"class="glyphicon glyphicon-heart" (click)="this.addToFavorites(vid) "></span></div>
+            <h5 id="notew">{{vid.notes}}/10</h5>
+            <h5 class="descriptionviddate">Publié le {{vid.date | date:'dd/MM/yyyy'}}</h5>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <section class="prez2">
+      <div class="container">
+        <div class="row">
+            <div class="separator"></div>
+          <h2 id="t1">Vous les avez aimés</h2>
+          <div class="col-sm-3" *ngFor="let vid of this.basetutoService.ListFavoritesTutosUser; index as i" >
+              <a class="thumbnail" >
+                <video autobuffer controls onmouseout="this.pause()" onmouseover="this.play()" preload="metadata"[src]="vid.id" title="{{vid.subject}}" frameborder="0" height="150px" width="240px"></video>
+              </a>
+              <h4 class="descriptionvid">{{vid.subject}}</h4>
+              <div class="notediv"><img class="notei"src="../../assets/images/etoiles1.png"></div>
+              <div class="heart" *ngIf="this.basetutoService.inList(this.basetutoService.ListFavoritesTutosUser,vid)==true"><span style="color: red"class="glyphicon glyphicon-heart" (click)="this.addToFavorites(vid) "></span></div>
+              <div class="heart" *ngIf="this.basetutoService.inList(this.basetutoService.ListFavoritesTutosUser,vid)==false"><span style="color:rgb(102, 96, 96)"class="glyphicon glyphicon-heart" (click)="this.addToFavorites(vid) "></span></div>
+              <h5 id="notew">{{vid.notes}}/10</h5>
+              <h5 class="descriptionviddate">Publié le {{vid.date | date:'dd/MM/yyyy'}}</h5>
+          </div>
+        </div>
+      </div>
+    </section>
