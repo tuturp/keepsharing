@@ -1,0 +1,130 @@
+<div class="row" (click)="menuShower(0)">
+  <div class="col-sm-8 col-sm-offset-2">
+    <h2>Enregistrer un nouveau Tuto</h2>
+    <form [formGroup]="tutoForm" (ngSubmit)="onSaveTuto()">
+      <div class="form-group">
+        <label for="subject">Titre</label>
+        <input type="text" id="subject"
+               class="form-control" formControlName="subject">
+      </div>
+      <div class="form-group">
+        <label for="content">Desccription</label>
+        <textarea type="text" id="content"
+               class="form-control" formControlName="content">
+        </textarea>
+      </div>
+      <div class="form-group select">
+          <label for="catselection">Sélectionnez une catégorie</label>
+          <div id="catselection" class="dropdown">
+              <button htype="button" id="categories_list"  class="btn btn-primary dropdown-toggle" data-toggle="dropdown">Catégories <span class="caret"></span></button>
+                <ul id="root" class="dropdown-menu"(mouseover)="menuShower(-1)">
+                  <li class="dropdown-submenu">
+                    <a class="test" tabindex="-1" href="#" id="list" (mouseover)="menuSelector(0)">Culture<span class="caret"></span></a>
+                  </li>
+                  <li class="divider"></li>
+                  <li class="dropdown-submenu">
+                    <a class="test" tabindex="-1" href="#" id="list" (mouseover)="menuSelector(1)">Sports<span class="caret"></span></a>
+                    
+                  </li>
+                  <li class="divider"></li>
+                  <li class="dropdown-submenu">
+                    <a class="test" tabindex="-1" href="#" id="list" (mouseover)="menuSelector(2)">Santé et Bien-être<span class="caret"></span></a>
+                    
+                  </li>
+                  <li class="divider"></li>
+                  <li class="dropdown-submenu">
+                    <a class="test" tabindex="-1" href="#" id="list" (mouseover)="menuSelector(3)">Musique<span class="caret"></span></a>
+                    
+                  </li>
+                  <li class="divider"></li>
+                  <li class="dropdown-submenu">
+                    <a class="test" tabindex="-1" href="#" id="list" (mouseover)="menuSelector(4)">Bricolage/jardinage<span class="caret"></span></a>
+                   
+                  </li>
+                </ul>
+              </div>
+      
+                  <div class="dropdown prezmenu" *ngIf="menuShow==-1">
+                    
+                                <ul class="list-group"*ngIf="menuSelection==0">
+                                  <li><a   class="list-group-item" (click)="this.basetutoService.selectionDossierNewTuto(0,0)" href="#">Expo</a></li>
+                                  <li><a  class="list-group-item"  (click)="this.basetutoService.selectionDossierNewTuto(0,1)" href="#">Spectacles</a></li>
+                                  <li><a  class="list-group-item"  (click)="this.basetutoService.selectionDossierNewTuto(0,2)" href="#">Théatre</a></li>
+                                  <li><a  class="list-group-item"  (click)="this.basetutoService.selectionDossierNewTuto(0,3)" href="#">Concerts</a></li>
+                                  <li><a  class="list-group-item"  (click)="this.basetutoService.selectionDossierNewTuto(0,4)" href="#">Loisirs</a></li>
+                                  <li><a  class="list-group-item"  (click)="this.basetutoService.selectionDossierNewTuto(0,5)" href="#">Familles</a></li>
+                                  <li><a  class="list-group-item"  (click)="this.basetutoService.selectionDossierNewTuto(0,6)" href="#">Manger et Boire</a></li>
+                                  <li><a  class="list-group-item"  (click)="this.basetutoService.selectionDossierNewTuto(0,7)" href="#">Soirée et Bar</a></li>
+                                </ul>
+                             
+            
+        
+      
+                
+                      <ul class="list-group"*ngIf="menuSelection==1">
+                        <li><a  class="list-group-item" href="#" (click)="this.basetutoService.selectionDossierNewTuto(1,0)">Football</a></li>
+                        <li><a  class="list-group-item" href="#" (click)="this.basetutoService.selectionDossierNewTuto(1,1)">Rugby</a></li>
+                        <li><a  class="list-group-item" href="#" (click)="this.basetutoService.selectionDossierNewTuto(1,2)">Basket</a></li>
+                        <li><a  class="list-group-item" href="#" (click)="this.basetutoService.selectionDossierNewTuto(1,3)">Handball</a></li>
+                        <li><a  class="list-group-item" href="#" (click)="this.basetutoService.selectionDossierNewTuto(1,4)">Volley</a></li>
+                        <li><a  class="list-group-item" href="#" (click)="this.basetutoService.selectionDossierNewTuto(1,5)">Golf</a></li>
+                        <li><a  class="list-group-item" href="#" (click)="this.basetutoService.selectionDossierNewTuto(1,6)">Tennis</a></li>
+                        <li><a  class="list-group-item" href="#" (click)="this.basetutoService.selectionDossierNewTuto(1,7)">Badminton</a></li>
+                        <li><a  class="list-group-item" href="#" (click)="this.basetutoService.selectionDossierNewTuto(1,8)">Fitness</a></li>
+                        <li><a  class="list-group-item" href="#" (click)="this.basetutoService.selectionDossierNewTuto(1,9)">Entrainements complets</a></li>
+                        <li><a  class="list-group-item" href="#" (click)="this.basetutoService.selectionDossierNewTuto(1,10)">Renforcement Musculaire</a></li>
+                      </ul>
+                   
+                  
+            
+                      <ul class="list-group" *ngIf="menuSelection==2">
+                        <li><a  class="list-group-item" href="#"  (click)="this.basetutoService.selectionDossierNewTuto(2,0)">Soins</a></li>
+                        <li><a  class="list-group-item" href="#" (click)="this.basetutoService.selectionDossierNewTuto(2,1)">Maquillage</a></li>
+                        <li><a  class="list-group-item" href="#" (click)="this.basetutoService.selectionDossierNewTuto(2,2)">Massages</a></li>
+                        <li><a  class="list-group-item" href="#" (click)="this.basetutoService.selectionDossierNewTuto(2,3)">Sommeil</a></li>
+                        <li><a  class="list-group-item" href="#" (click)="this.basetutoService.selectionDossierNewTuto(2,4)">Pour le corps</a></li>
+                        <li><a  class="list-group-item" href="#" (click)="this.basetutoService.selectionDossierNewTuto(2,5)">Philosophie</a></li>
+                        <li><a  class="list-group-item" href="#" (click)="this.basetutoService.selectionDossierNewTuto(2,6)">Régimes</a></li>
+                      </ul>
+                
+           
+          
+                      <ul class="list-group" *ngIf="menuSelection==3"> 
+                        <li><a  class="list-group-item" href="#" (click)="this.basetutoService.selectionDossierNewTuto(3,0)">Guitare</a></li>
+                        <li><a  class="list-group-item" href="#" (click)="this.basetutoService.selectionDossierNewTuto(3,1)">Percussions</a></li>
+                        <li><a  class="list-group-item" href="#" (click)="this.basetutoService.selectionDossierNewTuto(3,2)">DJ's</a></li>
+                        <li><a  class="list-group-item" href="#" (click)="this.basetutoService.selectionDossierNewTuto(3,3)">Solfège</a></li>
+                        <li><a  class="list-group-item" href="#" (click)="this.basetutoService.selectionDossierNewTuto(3,4)">Vents</a></li>
+                        <li><a  class="list-group-item" href="#" (click)="this.basetutoService.selectionDossierNewTuto(3,5)">Découvertes</a></li>
+                      </ul>
+                    
+             
+                      <ul class="list-group" *ngIf="menuSelection==4">
+                        <li><a  class="list-group-item" href="#" (click)="this.basetutoService.selectionDossierNewTuto(4,0)">Faire Maison</a></li>
+                        <li><a  class="list-group-item" href="#" (click)="this.basetutoService.selectionDossierNewTuto(4,1)">Astuces</a></li>
+                        <li><a  class="list-group-item" href="#" (click)="this.basetutoService.selectionDossierNewTuto(4,2)">Potager</a></li>
+                        <li><a  class="list-group-item" href="#" (click)="this.basetutoService.selectionDossierNewTuto(4,3)">Décoration</a></li>
+                        <li><a  class="list-group-item" href="#" (click)="this.basetutoService.selectionDossierNewTuto(4,4)">Ecologie</a></li>
+                        <li><a  class="list-group-item" href="#" (click)="this.basetutoService.selectionDossierNewTuto(4,5)">Pour le jardin</a></li>
+                        <li><a  class="list-group-item" href="#" (click)="this.basetutoService.selectionDossierNewTuto(4,6)">Eclairage</a></li>
+                      </ul>
+                </div>
+            </div>
+      <div class="form-group">
+        <button class="btn btn-primary cat" disabled *ngIf="this.basetutoService.NameDossierButton!=null">{{this.basetutoService.NameDossierButton}}</button>
+      </div>
+      <div class="form-group">
+          <label for='tuto'>Ajouter votre tuto</label>
+          <input id="tuto" type="file" (change)="detectFiles($event)"
+                 class="form-control" formControlName="tuto">
+          <p class="text-success" *ngIf="fileUploaded">Fichier chargé !</p>
+      </div>
+
+    <div class="sub">
+      <button class="btn btn-success" [disabled]="tutoForm.invalid || fileIsUploading"
+      type="submit">Enregistrer</button>
+      </div>
+
+    </form>
+  </div>
+</div>
