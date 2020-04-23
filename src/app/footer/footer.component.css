@@ -1,0 +1,24 @@
+footer{
+    height: 100px;
+    background-color: #555;
+    padding: 30px;
+  }
+  footer h5{
+    color: white;
+  }
+  
+  footer .glyphicon{
+    color: white;
+    margin-bottom: 20px;
+    font-size: 20px;
+  }
+  footer .glyphicon:hover{
+    color: #B23B29;
+    margin-bottom: 10px;
+    font-size: 30px;
+  }
+  .divifin{
+    height: 2px;
+    background-color: white;
+    width: 100%;
+  }

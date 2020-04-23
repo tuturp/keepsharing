@@ -1,0 +1,241 @@
+<div (click)="menuShower(0)">
+<section id="prez1">
+    <div class="container">
+      <div  class="dropdown">
+        <button htype="button" id="categories_list"  class="btn btn-primary dropdown-toggle" data-toggle="dropdown">Catégories <span class="caret"></span></button>
+          <ul id="root" class="dropdown-menu"(mouseover)="menuShower(-1)">
+            <li class="dropdown-submenu">
+              <a class="test" tabindex="-1" href="#" id="list" (mouseover)="menuSelector(0)">Culture<span class="caret"></span></a>
+            </li>
+            <li class="divider"></li>
+            <li class="dropdown-submenu">
+              <a class="test" tabindex="-1" href="#" id="list" (mouseover)="menuSelector(1)">Sports<span class="caret"></span></a>
+              
+            </li>
+            <li class="divider"></li>
+            <li class="dropdown-submenu">
+              <a class="test" tabindex="-1" href="#" id="list" (mouseover)="menuSelector(2)">Santé et Bien-être<span class="caret"></span></a>
+              
+            </li>
+            <li class="divider"></li>
+            <li class="dropdown-submenu">
+              <a class="test" tabindex="-1" href="#" id="list" (mouseover)="menuSelector(3)">Musique<span class="caret"></span></a>
+              
+            </li>
+            <li class="divider"></li>
+            <li class="dropdown-submenu">
+              <a class="test" tabindex="-1" href="#" id="list" (mouseover)="menuSelector(4)">Bricolage/jardinage<span class="caret"></span></a>
+             
+            </li>
+          </ul>
+        </div>
+        <div>
+            <form  class="form-inline" #f="ngForm" (ngSubmit)= 'onsubmit(f)'>
+              <input class="form-control mr-sm-2" name="search"  #search="ngModel" ngModel (change)= "getSearchChanges(search)" type="search" placeholder="Search" aria-label="Search">
+              <button class="btn btn-outline-success my-2 my-sm-0" name="searchSubmit" type="submit">Recherche</button>
+            </form>
+        </div>
+
+            <div class="dropdown prezmenu" *ngIf="menuShow==-1">
+              
+                          <ul class="list-group"*ngIf="menuSelection==0">
+                            <li><a   class="list-group-item" (click)="selectionDossier('dossierCulture','EXPO')" href="#">Expo</a></li>
+                            <li><a  class="list-group-item"  (click)="selectionDossier('dossierCulture','SPECTACLE')" href="#">Spectacles</a></li>
+                            <li><a  class="list-group-item"  (click)="selectionDossier('dossierCulture','THEATRES')" href="#">Théatre</a></li>
+                            <li><a  class="list-group-item"  (click)="selectionDossier('dossierCulture','CONCERTS')" href="#">Concerts</a></li>
+                            <li><a  class="list-group-item"  (click)="selectionDossier('dossierCulture','LOISIRS')" href="#">Loisirs</a></li>
+                            <li><a  class="list-group-item"  (click)="selectionDossier('dossierCulture','FAMILLES')" href="#">Familles</a></li>
+                            <li><a  class="list-group-item"  (click)="selectionDossier('dossierCulture','MANGERBOIRE')" href="#">Manger et Boire</a></li>
+                            <li><a  class="list-group-item"  (click)="selectionDossier('dossierCulture','SOIREEBAR')" href="#">Soirée et Bar</a></li>
+                          </ul>
+                       
+      
+  
+
+          
+                <ul class="list-group"*ngIf="menuSelection==1">
+                  <li><a  class="list-group-item" href="#" (click)="selectionDossier('dossierSport','FOOTBALL')">Football</a></li>
+                  <li><a  class="list-group-item" href="#" (click)="selectionDossier('dossierSport','RUGBY')">Rugby</a></li>
+                  <li><a  class="list-group-item" href="#" (click)="selectionDossier('dossierSport','BASKET')">Basket</a></li>
+                  <li><a  class="list-group-item" href="#" (click)="selectionDossier('dossierSport','HANDBALL')">Handball</a></li>
+                  <li><a  class="list-group-item" href="#" (click)="selectionDossier('dossierSport','VOLLEY')">Volley</a></li>
+                  <li><a  class="list-group-item" href="#" (click)="selectionDossier('dossierSport','GOLF')">Golf</a></li>
+                  <li><a  class="list-group-item" href="#" (click)="selectionDossier('dossierSport','TENNIS')">Tennis</a></li>
+                  <li><a  class="list-group-item" href="#" (click)="selectionDossier('dossierSport','BADMINTON')">Badminton</a></li>
+                  <li><a  class="list-group-item" href="#" (click)="selectionDossier('dossierSport','FITNESS')">Fitness</a></li>
+                  <li><a  class="list-group-item" href="#" (click)="selectionDossier('dossierSport','ENTRAINEMENTCPLT')">Entrainements complets</a></li>
+                  <li><a  class="list-group-item" href="#" (click)="selectionDossier('dossierSport','RENFMUSCU')">Renforcement Musculaire</a></li>
+                </ul>
+             
+            
+      
+                <ul class="list-group" *ngIf="menuSelection==2">
+                  <li><a  class="list-group-item" href="#"  (click)="selectionDossier('dossierSanteBienEtre','SOIN')">Soins</a></li>
+                  <li><a  class="list-group-item" href="#" (click)="selectionDossier('dossierSanteBienEtre','MAQUILLAGE')">Maquillage</a></li>
+                  <li><a  class="list-group-item" href="#" (click)="selectionDossier('dossierSanteBienEtre','MASSAGES')">Massages</a></li>
+                  <li><a  class="list-group-item" href="#" (click)="selectionDossier('dossierSanteBienEtre','SOMMEIL')">Sommeil</a></li>
+                  <li><a  class="list-group-item" href="#" (click)="selectionDossier('dossierSanteBienEtre','CORPS')">Pour le corps</a></li>
+                  <li><a  class="list-group-item" href="#" (click)="selectionDossier('dossierSanteBienEtre','PHILOSOPHIE')">Philosophie</a></li>
+                  <li><a  class="list-group-item" href="#" (click)="selectionDossier('dossierSanteBienEtre','REGIMES')">Régimes</a></li>
+                </ul>
+          
+     
+    
+                <ul class="list-group" *ngIf="menuSelection==3"> 
+                  <li><a  class="list-group-item" href="#" (click)="selectionDossier('dossierMusique','GUITARE')">Guitare</a></li>
+                  <li><a  class="list-group-item" href="#" (click)="selectionDossier('dossierMusique','PERCUSSIONS')">Percussions</a></li>
+                  <li><a  class="list-group-item" href="#" (click)="selectionDossier('dossierMusique','DJ')">DJ's</a></li>
+                  <li><a  class="list-group-item" href="#" (click)="selectionDossier('dossierMusique','SOLFEGE')">Solfège</a></li>
+                  <li><a  class="list-group-item" href="#" (click)="selectionDossier('dossierMusique','VENTS')">Vents</a></li>
+                  <li><a  class="list-group-item" href="#" (click)="selectionDossier('dossierMusique','DECOUVERTES')">Découvertes</a></li>
+                </ul>
+              
+       
+                <ul class="list-group" *ngIf="menuSelection==4">
+                  <li><a  class="list-group-item" href="#" (click)="selectionDossier('dossierBricoJar','FAIREMAISON')">Faire Maison</a></li>
+                  <li><a  class="list-group-item" href="#" (click)="selectionDossier('dossierBricoJar','ASTUCES')">Astuces</a></li>
+                  <li><a  class="list-group-item" href="#" (click)="selectionDossier('dossierBricoJar','POTAGERS')">Potager</a></li>
+                  <li><a  class="list-group-item" href="#" (click)="selectionDossier('dossierBricoJar','DECO')">Décoration</a></li>
+                  <li><a  class="list-group-item" href="#" (click)="selectionDossier('dossierBricoJar','ECOLO')">Ecologie</a></li>
+                  <li><a  class="list-group-item" href="#" (click)="selectionDossier('dossierBricoJar','JARDIN')">Pour le jardin</a></li>
+                  <li><a  class="list-group-item" href="#" (click)="selectionDossier('dossierBricoJar','ECLAIRAGE')">Eclairage</a></li>
+                </ul>
+          </div>
+
+
+      </div>   
+    </section>
+
+    <div class="divifin"></div>
+    <section  id="prez2" *ngIf="!(dossierTutosCourant == null || this.recherche)">
+      <div class="container">
+        <div class="separator"></div>
+        <div class="row">
+          <h2 id="t1" >Vous Trouverez dans la Catégorie {{dossierThemeTotal.label}}</h2>
+          <div class="col-sm-3" *ngFor="let vid of dossierTutosCourant">
+            <a class="thumbnail" target="_blank" href="#/{{dossierTotalCourant.value}}/{{dossierThemeTotal.label}}/{{vid.id}}">
+              <video autobuffer controls onmouseout="this.pause()" onmouseover="this.play()" preload="metadata"[src]="vid.id" title="{{vid.subject}}" frameborder="0" height="150px" width="240px"></video>
+            </a>
+            <h4 class="descriptionvid">{{vid.subject}}</h4>
+            <div class="notediv"><img class="notei"src="../../assets/images/etoiles1.png"></div>
+            <div class="heart" *ngIf="this.basetutosService.inList(this.basetutosService.ListFavoritesTutosUser,vid)==true"><span style="color: red"class="glyphicon glyphicon-heart" (click)="this.basetutosService.addToFavorites(vid) "></span></div>
+            <div class="heart" *ngIf="this.basetutosService.inList(this.basetutosService.ListFavoritesTutosUser,vid)==false"><span style="color:rgb(102, 96, 96)"class="glyphicon glyphicon-heart" (click)="this.basetutosService.addToFavorites(vid) "></span></div>
+            <h5 id="notew">{{vid.notes}}/10</h5>
+            <h5 class="descriptionviddate">Publié le {{vid.date | date:'dd/MM/yyyy'}}</h5>
+          </div>
+
+        </div>
+      </div>
+    </section>
+    <section id="prez3" *ngIf="this.recherche">
+        <div class="container">
+          <div class="separator">
+            <div class="row">
+              <h2 id="t2">Mes Tutos</h2>
+              <div class="col-sm-3" *ngFor="let vid of this.DossierFiltered">
+                  <a class="thumbnail" >
+                    <video autobuffer controls onmouseout="this.pause()" onmouseover="this.play()" preload="metadata"[src]="vid.id" title="{{vid.subject}}" frameborder="0" height="150px" width="240px"></video>
+                  </a>
+                  <h4 class="descriptionvid">{{vid.subject}}</h4>
+                  <div class="notediv"><img class="notei"src="../../assets/images/etoiles1.png"></div>
+                  <div class="heart" *ngIf="this.basetutoService.inList(this.basetutoService.ListFavoritesTutosUser,vid)==true"><span style="color: red"class="glyphicon glyphicon-heart" (click)="this.addToFavorites(vid) "></span></div>
+                    <div class="heart" *ngIf="this.basetutoService.inList(this.basetutoService.ListFavoritesTutosUser,vid)==false"><span style="color:rgb(102, 96, 96)"class="glyphicon glyphicon-heart" (click)="this.addToFavorites(vid) "></span></div>
+                  <h5 id="notew">{{vid.notes}}/10</h5>
+                  <h5 class="descriptionviddate">Publié le {{vid.date | date:'dd/MM/yyyy'}}</h5>
+              </div>
+      
+            </div> 
+          </div>
+        </div>
+
+      </section>
+    <section *ngIf="!this.recherche"id="prez3">
+      <div class="container">
+        <div class="separator"></div>
+        <div class="row">
+          <h2 id="t2">Ceci peut vous intéresser</h2>
+          <div class="col-sm-3">
+            <a class="thumbnail" href="../../assets/tutos/v1.mp4" target="_blank">
+              <video autobuffer controls onmouseout="this.pause()" onmouseover="this.play()" poster="../../assets/tutos/p1.png" preload="metadata" [src]="this.tabUrlFinal[0]" title="conseils jardinnage" frameborder="0" height="150px" width="240px"></video>
+            </a>
+            <h4 class="descriptionvid">Découvrez une des meilleurs applications de tourisme culturel</h4>
+            <div class="notediv"><img class="notei"src="../../assets/images/etoiles1.png"></div>
+            <h5 id="notew">2/10</h5>
+            <h5 class="descriptionviddate">Publié le 18/03/2014</h5>
+          </div>
+          <div class="col-sm-3">
+            <a class="thumbnail" href="../../assets/tutos/v2.mp4" target="_blank">
+       
+              <video autobuffer controls onmouseout="this.pause()" onmouseover="this.play()" poster="../../assets/tutos/p2.png" preload="metadata" [src]="this.tabUrlFinal[1]" title="conseils jardinnage" frameborder="0" height="150px" width="240px"></video>
+            </a>
+            <h4 class="descriptionvid">TutoDraw: apprenez à dessiner un visage féminin avec très peu d'outilse</h4>
+            <div class="notediv"><img class="notei"src="../../assets/images/etoiles1.png"></div>
+            <h5 id="notew">2/10</h5>
+            <h5 class="descriptionviddate">Publié le 18/03/2014</h5>
+            
+          </div>
+          <div class="col-sm-3">
+            <a class="thumbnail" href="../../assets/tutos/v3.mp4" target="_blank">
+       
+              <video autobuffer controls onmouseout="this.pause()" onmouseover="this.play()" poster="../../assets/tutos/p3.png" preload="metadata" [src]="this.tabUrlFinal[2]" title="conseils jardinnage" frameborder="0" height="150px" width="240px"></video>
+            </a>
+            <h4 class="descriptionvid">Témoignge d'expat': les sites culturels de Prague</h4>
+            <div class="notediv"><img class="notei"src="../../assets/images/etoiles1.png"></div>
+            <h5 id="notew">2/10</h5>
+            <h5 class="descriptionviddate">Publié le 18/03/2014</h5>
+          </div>
+          <div class="col-sm-3">
+            <a class="thumbnail" href="../../assets/tutos/v4.mp4" target="_blank">
+              
+              <video autobuffer controls onmouseout="this.pause()" onmouseover="this.play()" poster="../../assets/tutos/p4.png" preload="metadata" [src]="this.tabUrlFinal[3]" title="conseils jardinnage" frameborder="0" height="150px" width="240px"></video>
+            </a>
+            <h4 class="descriptionvid">Idées bons plans: guide des bonnesa dresses de restauration à Paris</h4>
+            <div class="notediv"><img class="notei"src="../../assets/images/etoiles1.png"></div>
+            <h5 id="notew">2/10</h5>
+            <h5 class="descriptionviddate">Publié le 18/03/2014</h5>
+          </div>
+          <div class="col-sm-3">
+            <a class="thumbnail" href="../../assets/tutos/v5.mp4" target="_blank">
+              
+              <video autobuffer controls onmouseout="this.pause()" onmouseover="this.play()" poster="../../assets/tutos/p5.png" preload="metadata" [src]="this.tabUrlFinal[4]" title="conseils jardinnage" frameborder="0" height="150px" width="240px"></video>
+            </a>
+            <h4 class="descriptionvid">Les principales étapes d'une démarche marketing</h4>
+            <div class="notediv"><img class="notei"src="../../assets/images/etoiles1.png"></div>
+            <h5 id="notew">2/10</h5>
+            <h5 class="descriptionviddate">Publié le 18/03/2014</h5>
+          </div>
+          <div class="col-sm-3">
+            <a class="thumbnail" href="../../assets/tutos/v6.mp4" target="_blank">
+              
+              <video autobuffer controls onmouseout="this.pause()" onmouseover="this.play()" poster="../../assets/tutos/p6.png" preload="metadata" [src]="this.tabUrlFinal[5]" title="conseils jardinnage" frameborder="0" height="150px" width="240px"></video>
+            </a>
+            <h4 class="descriptionvid">Mon voyage à Barcelonne en images</h4>
+            <div class="notediv"><img class="notei"src="../../assets/images/etoiles1.png"></div>
+            <h5 id="notew">2/10</h5>
+            <h5 class="descriptionviddate">Publié le 18/03/2014</h5>
+          </div>
+          <div class="col-sm-3">
+            <a class="thumbnail" href="../../assets/tutos/v7.mp4" target="_blank">
+              
+              <video autobuffer controls onmouseout="this.pause()" onmouseover="this.play()" preload="metadata" poster="../../assets/tutos/p7.png" [src]="this.tabUrlFinal[6]" title="conseils jardinnage" frameborder="0" height="150px" width="240px"></video>
+            </a>
+            <h4 class="descriptionvid">L'art de la rue, les sorties culturels du Languedoc-Rousillon</h4>
+            <div class="notediv"><img class="notei"src="../../assets/images/etoiles1.png"></div>
+            <h5 id="notew">2/10</h5>
+            <h5 class="descriptionviddate">Publié le 18/03/2014</h5>
+          </div>
+          <div class="col-sm-3">
+            <a class="thumbnail" href="../../assets/tutos/v8.mp4" target="_blank">
+             
+              <video autobuffer controls onmouseout="this.pause()" onmouseover="this.play()" preload="metadata"poster="../../assets/tutos/p8.png" [src]="this.tabUrlFinal[7]" title="conseils jardinnage" frameborder="0" height="150px" width="240px"></video>
+            </a>
+            <h4 class="descriptionvid">Organisation de sortie scolaire: mettre tout les atouts de son coté</h4>
+            <div class="notediv"><img class="notei"src="../../assets/images/etoiles1.png"></div>
+            <h5 id="notew">2/10</h5>
+            <h5 class="descriptionviddate">Publié le 18/03/2014</h5>
+          </div>
+          
+        </div>
+      </div>
+    </section>
+  </div>

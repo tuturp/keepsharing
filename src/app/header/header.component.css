@@ -1,0 +1,60 @@
+
+  
+  #monmenu{
+    background-color: #00426B;
+  }
+  
+  #monmenu ul{
+    margin:10px 10px 0px 10px;
+  }
+  #text{
+  
+    padding:0;
+  }
+  
+  
+  #monmenu ul li form input, #monmenu ul li form button{
+    margin-bottom: 10px;
+  }
+   #monmenu ul li form button{
+     color: white;
+   }
+  #monmenu ul li form button:hover{
+    background-color: white;
+    color: #00426B;
+    }
+  
+  #monmenu ul li form button{
+    background-color: #00426B;
+    border: 1px solid white;
+  }
+  .text{
+    margin-top: 7px;
+    text-shadow: 1px 1px 1px #000;
+  }
+  
+  #butsit a{
+    font-family: "Righteous", sans-serif;
+    font-size: 20px;
+    color: white;
+  }
+  #butsit a:hover{
+    background-color: white;
+    color: #00426B;
+    border-radius: 5px;
+    text-shadow: none;
+    box-shadow: 0 2px 4px 0 rgba(0, 0, 0, 0.7), 0 6px 20px 0 rgba(0, 0, 0, 0.7);
+  }
+  #sitename a{
+    font-size:40px;
+    color: #FFAD42;
+    margin-right: 200px;
+    font-family: "Bree serif", sans-serif;
+  }
+  
+ 
+  
+  section{
+    padding:0 0 70px 0;
+  }
+  

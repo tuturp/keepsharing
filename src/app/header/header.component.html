@@ -1,0 +1,40 @@
+<nav class="navbar navbar-default navbar-fixed-top">
+    <div class="container-fluid" id="text">
+  
+      <div class="navbar-header">
+        <button type="button" class="navbar-toggle" data-toggle="collapse" data-target="#monmenu">
+          <span class="icon-bar"></span>
+          <span class="icon-bar"></span>
+          <span class="icon-bar"></span>
+        </button>
+      </div>
+  
+      <div class="collapse navbar-collapse" id="monmenu">
+        <ul class="nav navbar-nav">
+          <li class="text" id="sitename"  routerLink="information"><a href="#bander" class="navbar-brand" >KeepSharing</a></li>
+          <li class="text"  id="butsit" routerLinkActive="active" routerLink='searchtips'><a  >Accueil</a></li>
+          <li id="search">
+          <li>
+            <form class="form-inline" #f="ngForm" (ngSubmit)= 'onsubmit(f)'>
+              <input class="form-control mr-sm-2" name="search"  #search="ngModel" ngModel (change)= "getSearchChanges(search)" type="search" placeholder="Search" aria-label="Search">
+              <button class="btn btn-outline-success my-2 my-sm-0" name="searchSubmit" type="submit">Recherche</button>
+            </form>
+          </li>
+          <li class="text" id="butsit"routerLinkActive="active" routerLink='share'><a>Je partage</a></li>
+          <li class="text" id="butsit"><a href="#Mescours" routerLinkActive="active" routerLink="userCourses">Mes cours</a></li>
+          <li class="text" id="butsit"><a href="#Moncompte" routerLinkActive="active" routerLink="userProfil">Mon compte</a></li>
+  
+        </ul>
+        <ul class="nav navbar-nav navbar-right">
+          <li class="text" *ngIf="!isAuth" id="butsit" routerLinkActive="active" routerLink="auth"><a ><span class="glyphicon glyphicon-log-in"></span> <strong>Login</strong></a></li>
+  
+        </ul>
+        <ul class="nav navbar-nav navbar-right">
+            <li class="text" (click)="onSignOut()" *ngIf="isAuth" id="butsit"><a ><span class="glyphicon glyphicon-log-out"></span> <strong>Déconnection</strong></a></li>
+    
+          </ul>
+      </div>
+    </div>
+  </nav>
+  <div id="margetop"></div>
+  
