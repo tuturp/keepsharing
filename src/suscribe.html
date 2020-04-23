@@ -1,0 +1,112 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <meta charset="utf-8"/>
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <script src="js/jquery.js"></script>
+    <script src="js/suscribe.js"></script>
+    <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/js/bootstrap.min.js"></script>
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css">
+    <title>Bienvenue sur KeepSharing</title>
+    <link href="https://fonts.googleapis.com/css?family=Lato" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css?family=Bree+Serif|Fredoka+One|Inconsolata|Major+Mono+Display|Nanum+Myeongjo|Righteous" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css?family=Lobster" rel="stylesheet">
+    <link rel="stylesheet" href="css/suscribe.css">
+    <title></title>
+  </head>
+
+
+  <body>
+    <nav class="navbar navbar-default navbar-fixed-top">
+      <div class="container-fluid" id="text">
+
+        <div class="navbar-header">
+          <button type="button" class="navbar-toggle" data-toggle="collapse" data-target="#monmenu">
+            <span class="icon-bar"></span>
+            <span class="icon-bar"></span>
+            <span class="icon-bar"></span>
+          </button>
+        </div>
+
+        <div class="collapse navbar-collapse" id="monmenu">
+          <ul class="nav navbar-nav">
+            <li class="text" id="sitename"><a href="index.html" class="navbar-brand">KeepSharing</a></li>
+            <li class="text"  id="butsit"><a href="home.html">Accueil</a></li>
+            <li id="search">
+              <a href="#search">
+                <form class="form-inline">
+                  <input class="form-control mr-sm-2" type="search" placeholder="Search" aria-label="Search">
+                  <button class="btn btn-outline-success my-2 my-sm-0" type="submit">Recherche</button>
+                </form>
+              </a>
+            </li>
+            <li class="text" id="butsit"><a href="#partage">Je partage</a></li>
+            <li class="text" id="butsit"><a href="#Mescours">Mes cours</a></li>
+            <li class="text" id="butsit"><a href="#Moncompte">Mon compte</a></li>
+
+          </ul>
+          <ul class="nav navbar-nav navbar-right">
+            <li class="text"  id="butsit"><a href="login.html"><span class="glyphicon glyphicon-user"></span> <strong>LOGIN</strong></a></li>
+
+          </ul>
+        </div>
+
+
+      </div>
+    </nav>
+
+    <section id="prez1">
+      <div class="container">
+        <h1>Inscription</h1>
+        <form>
+          <div class="form-check">
+            <label class="form-check-label" for="form-check-input">Sexe :   </label>
+            <input name="sexe" type="radio" class="form-check-input" id="CheckH" required>
+            <label class="form-check-label" for="CheckH">Homme</label>
+            <input name="sexe" type="radio" class="form-check-input" id="CheckF" required>
+            <label class="form-check-label" for="CheckF">Femme</label>
+          </div>
+            <div class="form-group">
+              <label for="setFirstName">Prénom</label>
+              <input type="text" class="form-control" id="setFirstName" aria-describedby="emailHelp" placeholder="Ton Prénom" required>
+            </div>
+            <div class="form-group">
+              <label for="setLastName1">Nom</label>
+              <input type="text" class="form-control" id="setLastName1" aria-describedby="emailHelp" placeholder="Ton Nom" required>
+            </div>
+            <div class="form-group">
+              <label for="setEmail1">Addresse Email</label>
+              <input type="email" class="form-control" id="setEmail1" aria-describedby="emailHelp" placeholder="Ton Addresse Email" required>
+            </div>
+            <div class="form-group">
+              <input type="email" class="form-control" id="setEmail2" aria-describedby="emailHelp" placeholder="Confirmez votre addresse Email" required>
+            </div>
+            <div class="form-group">
+              <label for="setPassword1">Mot de Passe</label>
+              <input type="password" class="form-control" id="setPassword1" placeholder="Mot de Passe"required>
+            </div>
+            <div class="form-group">
+              <input type="password" class="form-control" id="setPassword2" placeholder="Confirmez votre mot de passe"required>
+            </div>
+            <div class="form-check">
+              <input type="checkbox" class="form-check-input" id="checkR" required>
+              <label class="form-check-label" for="CheckH">J'ai lu et j'accepte <a href="#">les Conditions Générales d'Utilisation </a>et <a href="#">la Politique de Protection des Données Personnelles</a>.</label>
+            </div>
+
+            <button type="submit" class="btn btn-primary" id="submit">Confirmer l'envoie du formulaire</button>
+        </form>
+      </div>
+    </section>
+
+
+
+    <div class="divifin"></div>
+    <footer class="text-center">
+      <a href="#bander">
+        <span class="glyphicon glyphicon-chevron-up"></span>
+      </a>
+      <h5>© 2018 KeepSharing.fr</h5>
+    </footer>
+
+  </body>
+</html>
