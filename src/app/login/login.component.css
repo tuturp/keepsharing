@@ -1,0 +1,46 @@
+#login{
+    text-align: center;
+    width: 400px;
+    height: 400px;
+    margin:300px auto 200px auto;
+    background: rgb(252, 251, 250);
+    box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.5), 0 6px 20px 0 rgba(0, 0, 0, 0.5);
+    border-radius: 5px;
+  }
+  
+  #login h1{
+    font-family: "Lobster", sans-serif;
+    color: rgb(70, 112, 131);
+    margin-bottom: 30px;
+  
+  }
+  #login h3{
+    font-family: "Bree-Serif", sans-serif;
+    font-size: 20px;
+    margin-top: 50px;
+    color: rgba(0, 66, 107, 0.952);
+  }
+  
+  #exampleCheck1{
+    margin-top: 10px;
+    margin-bottom: 20px;
+  }
+  .btn {
+      border: solid white 1px;
+      background: rgb(243, 126, 9);
+  }
+  
+  #prez1{
+    padding:150 0 70px 0;
+  }
+  
+  .btn btn-danger{
+    background: red;
+    margin-top: 40%;
+    
+  }
+
+
+
+
+

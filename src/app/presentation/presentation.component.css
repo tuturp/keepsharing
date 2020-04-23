@@ -1,0 +1,113 @@
+
+
+.bander{
+    padding: 0;
+  }
+  #bander{
+    background: no-repeat center/100%  url("../../assets/images/friend.jpg");
+    height: 800px;
+  }
+ 
+  
+  #bander div h2{
+    margin-top: 300px;
+    text-align: center;
+    color: white;
+    font-weight: bold;
+    font-size: 40px;
+    text-shadow: 1px 1px 1px #000;
+    font-family: "Lobster", sans-serif;
+  }
+  
+  #img1{
+    display: inline-block;
+    float:left;
+    margin:40px 10px 5px 10px;
+    border: 5px solid white;
+    box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.7), 0 6px 20px 0 rgba(0, 0, 0, 0.7);
+  
+  }
+  
+  .divider{
+    margin: 50px auto;
+    background: #B23B29;
+    height: 2px;
+    width:200px;
+  }
+  
+  
+  #para1 h1 {
+    text-align: center;
+    margin: 30px 0 80px 0;
+    font-family: "Bree Serif", sans-serif;
+    font-size: 50px;
+  }
+  
+  #para1 div p,#para3 div p{
+    text-align: justify;
+    line-height: 2;
+    font-size: 20px;
+    color: #888;
+    font-family: "Bree Serif", sans-serif;
+  }
+  #p1 p{
+    margin-bottom: 60px;
+  }
+  #p2 p{
+    color: white;
+    text-align: justify;
+    line-height: 2;
+    font-size: 20px;
+    font-family: "Bree serif", sans-serif;
+    color: white;
+    margin-top: 90px;
+    margin-left: 50px;
+    margin-bottom: 80px;
+    display: inline-block;
+    width:630px;
+  }
+  
+  #p3 p{
+    margin-top:50px;
+    float: left;
+    width: 450px;
+  }
+  #p4 p{
+      margin-left: 50px;
+      margin-top: 90px;
+      color: white;
+      text-align: justify;
+      line-height: 2;
+      font-size: 20px;
+      font-family: "Bree serif", sans-serif;
+      display: inline-block;
+      width:500px;
+  }
+  
+  #img2{
+    display: inline-block;
+    float: right;
+    width: 630px;
+    margin-top: 80px;
+    box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.5), 0 6px 20px 0 rgba(0, 0, 0, 0.5);
+  
+  }
+  #img3{
+    display: inline-block;
+    float: left;
+    width:600px;
+    margin:40px 10px 5px 10px;
+    border: 5px solid white;
+    box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.7), 0 6px 20px 0 rgba(0, 0, 0, 0.7);
+  }
+  
+  #prez2, #prez4{
+    background-color: #00426B;
+  }
+  
+  
+  section{
+    padding:0 0 70px 0;
+  }
+  
+ 
